@@ -6,9 +6,10 @@ const path = require('path')
 const expressLayout = require('express-ejs-layouts')
 const PORT = process.env.PORT || 4000
 
-app.get('/', function(req,res){
-    res.render('home')
-})
+// Assets
+app.use(express.static('public'))
+
+
 
 // set templete engine
 app.use(expressLayout)
@@ -18,4 +19,20 @@ app.set('view engine', 'ejs')
 
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`)
+})
+
+app.get('/', (req,res) => {
+    res.render('home')
+})
+
+app.get('/cart', (req,res)=>{
+    res.render('customers/cart')
+})
+
+app.get('/login', (req,res)=>{
+    res.render('auth/login')
+})
+
+app.get('/register', (req,res)=>{
+    res.render('auth/register')
 })
