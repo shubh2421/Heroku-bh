@@ -29,7 +29,7 @@ connection
     console.log("Connection failed...");
   });
 
-
+  
 // // Session store
 // let mongoStore = new MongoDbStore({
 //   mongooseConnection: connection,
@@ -54,7 +54,6 @@ const passportInit = require("./app/config/passport");
 passportInit(passport);
 app.use(passport.initialize());
 app.use(passport.session());
-
 
 app.use(flash());
 
