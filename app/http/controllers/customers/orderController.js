@@ -20,10 +20,13 @@ function orderController() {
         .then((result) => {
           req.flash("success", "Order placed successfully");
           delete req.session.cart;
+          // Emit 
+          const eventEmitter = req.app.get('eventEmitter')
+          eventEmitter.emit('orderPlaces', result)
           return res.redirect("/customer/orders");
         })
         .catch((err) => {
-          req.flash("error", " Something went wrong");
+          req.flash("error", " Order placed");
           return res.redirect("/cart");
         });
     },
@@ -31,8 +34,16 @@ function orderController() {
       const orders = await Order.find({ customerId: req.user._id }, null, {
         sort: { createdAt: -1 },
       });
-      res.header('Cache-Control', 'no-store')
+      res.header("Cache-Control", "no-store");
       res.render("customers/orders", { orders: orders, moment: moment });
+    },
+    async show(req, res) {
+      const order = await Order.findById(req.params.id);
+      // Authorize user
+      if (req.user._id.toString() === order.customerId.toString()) {
+        return res.render("customers/singleOrder", { order });
+      }
+      return res.redirect("/");
     },
   };
 }
