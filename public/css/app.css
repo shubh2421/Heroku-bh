@@ -283,7 +283,7 @@ body {
 }
 
 nav li:last-child a {
-  background: #fe5f1e;
+  background: #3CB371;
 }
 nav li:last-child a:hover {
   background: #b23301;
@@ -293,7 +293,7 @@ nav li a {
   transition: all 0.3s ease-in-out;
 }
 nav li a:hover {
-  color: #fe5f1e;
+  color: #3CB371;
 }
 
 section.hero {
@@ -305,12 +305,12 @@ section.hero {
 }
 
 .add-to-cart {
-  border: 2px solid #fe5f1e;
-  color: #fe5f1e;
+  border: 2px solid #3CB371;
+  color: #3CB371;
   transition: all 0.3s ease-in-out;
 }
 .add-to-cart:hover {
-  background: #fe5f1e;
+  background: #3CB371;
   border-color: #fff;
   color: #fff;
 }
@@ -319,7 +319,7 @@ section.hero {
 }
 
 .btn-primary {
-  background: #fe5f1e;
+  background: #3CB371;
   transition: all 0.3s ease-in-out;
 }
 .btn-primary:hover {
@@ -330,7 +330,7 @@ section.cart {
   background: #f8f8f8;
 }
 section.cart .amount {
-  color: #fe5f1e;
+  color: #3CB371;
 }
 
 section.login {
@@ -338,7 +338,7 @@ section.login {
   min-height: calc(100vh - 86px);
 }
 section.login a {
-  color: #fe5f1e;
+  color: #3CB371;
 }
 section.login a:hover {
   color: #b23301;
@@ -350,7 +350,7 @@ section.login a:hover {
 }
 
 a.link {
-  color: #fe5f1e;
+  color: #3CB371;
 }
 
 section.status {
@@ -447,11 +447,11 @@ section.status {
 }
 
 .status-box ul li.current span {
-  color: #fe5f1e;
+  color: #3CB371;
 }
 
 .status-box ul li.current span:after {
-  background: #fe5f1e;
+  background: #3CB371;
 }
 
 .status-box ul li small {
@@ -475,4 +475,117 @@ section.status {
   .status-box ul li span:before {
     font-size: 34px;
   }
+}
+.foote {
+  background-color: #232323;
+}
+
+.row {
+  display: flex;
+  /* margin: 33px 330px; */
+  margin-top: 51px;
+}
+
+.col {
+  padding: 10px 65px;
+}
+
+.logo1 img {
+  margin: -72px 5px;
+  width: 160px;
+}
+
+.header {
+  font-size: 22px;
+  color: white;
+  display: flex;
+  margin: 0 25px;
+  /* text-align: center; */
+}
+
+#foot {
+  list-style: none;
+  /* margin: 10px -13px; */
+  padding: 3px 23px;
+  color: #232323;
+  font-size: 17px;
+}
+
+#foot li {
+  font-size: 17px;
+  transition: letter-spacing 0.3s ease-in-out;
+  color: white;
+}
+
+#foot li:hover {
+  color: white;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+
+.copyright p {
+  text-align: center;
+  padding: 21px 0;
+  color: white;
+}
+
+.row .col ul li i {
+  padding: 10px 25px;
+  color: #2fd072;
+}
+
+#flex li {
+  font-size: 30px;
+}
+
+#flex {
+  padding: 0px 20px;
+  display: flex;
+  list-style: none;
+}
+
+.container1 {
+  display: flex;
+}
+
+.container1 img {
+  width: 174%;
+  height: 134px;
+  margin-top: -70px;
+  margin-left: -20px;
+}
+
+buttonh {
+  border-radius: 20px;
+  border: 1px solid #ffffff;
+  background-color: goldenrod;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  outline: none;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+}
+
+#btnh {
+  background-size: 200% 100%;
+  transition: background-position 0.5s, color 0.5s;
+  background-image: linear-gradient(to right, #2fd072 50%, black 50%);
+  border: #2fd072;
+}
+
+#btnh:hover {
+  background-position: right bottom;
+  color: #fff;
+}
+
+buttonh:active {
+  transform: scale(0.95);
+}
+
+buttonh.ghost {
+  background-color: transparent;
+  border-color: #FFFFFF;
 }
